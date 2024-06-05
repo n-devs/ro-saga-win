@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" href="./src/images/icon.ico" />
-    <title>Hello World!</title>
 
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-    <script type="module" src="/src/renderer.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Launcher</title>
+  <link rel="stylesheet" href="./src/frame.css">
+  
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css" />
+</head>
+
+<body>
+  <div id="draggableDiv" class="draggable">
+    <header id="title-bar" class="title-bar">
+      <!-- <div class="resize-handle resize-handle-top"></div> -->
+      <!-- <div class="resize-handle resize-handle-left"></div> -->
+      <div class="window-controls">
+        <button aria-label="move-draggable" id="move-draggable" tabIndex="-1" class="window-control window-move-win">
+          <i class="fa-duotone fa-grip-dots-vertical"></i>
+        </button>
+        <button aria-label="move-win" id="move-win" tabIndex="-1" class="window-control window-move-win">
+          <i class="fa-duotone fa-up-down-left-right"></i>
+        </button>
+        <button aria-label="minimize" id="minimumize" tabIndex="-1" class="window-control window-minimize">
+          <i class="fa-duotone fa-window-minimize"></i>
+        </button>
+        <button aria-label="maximize" id="maximumize" tabIndex="-1" class="window-control window-maximize">
+          <i class="fa-duotone fa-window-maximize"></i>
+        </button>
+        <button aria-label="exit-full-screen" id="exit-full-screen" tabIndex="-1" class="window-control window-full-screen">
+          <i class="fa-duotone fa-arrow-down-left-and-arrow-up-right-to-center"></i>
+        </button>
+        <button aria-label="full-screen" id="full-screen" tabIndex="-1" class="window-control window-full-screen">
+          <i class="fa-duotone fa-arrow-up-right-and-arrow-down-left-from-center"></i>
+        </button>
+        <button aria-label="close" id="close" tabIndex="-1" class="window-control window-close">
+          <i class="fa-duotone fa-xmark"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- <h1>💖 Hello World!</h1>
+  <p>Welcome to your Electron application.</p> -->
+    <script type="module" src="/src/renderer.js"></script>
+</body>
+
 </html>
